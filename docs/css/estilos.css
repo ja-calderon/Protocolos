@@ -14,6 +14,7 @@
 body{
     background-color: var(--fondoOscuro);
     max-width: 1200px;
+    margin: auto;
 }
 header{
     background: var(--fondoVerde);
