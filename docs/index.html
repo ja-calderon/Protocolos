@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presentación de Protocolos</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Protocolos</h1>
+    </header>
+    <main>
+      <section class="datos">
+        <div class="contenedor__lugar">
+            <label for="lugar">Lugar: </label>
+            <input type="text" class="lugar" name="lugar" />
+        </div>
+        <div class="contenedor__fecha">
+            <label for="fecha">Fecha: </label>
+            <input type="date" class="fecha" name="fecha" />
+        </div>
+        <div class="contenedor__hora">
+            <label for="horaComienzo">Hora Comienzo: </label>
+            <input type="time" class="horaComienzo" name="horaComienzo"/>
+            <label for="horaFinal" class="horaFinalizacion">Hora Finalización: </label>
+            <input type="time" class="horaFinal" name="horaFinal" />
+        </div>
+        <div class="contenedor__cirugia">
+            <label for="cirugia">Cirugía: </label>
+            <input type="text" class="cirugia" name="cirugia" />
+        </div>
+        <div class="contenedor__anestesiologo">
+            <label for="nombreAnestesiologo">Anestesiólogo: </label>
+            <input type="text" class="nombreAnestesiologo" name="nombreAnestesiologo"/>
+        </div>
+        <div class="contenedor__paciente">
+            <label for="nombrePaciente">Nombre paciente: </label>
+            <input type="text" class="nombrePaciente" name="nombrePaciente" />
+        </div>
+        <div class="contenedor__hcDNI">
+            <label for="hcDni">HC / DNI: </label>
+            <input type="number" class="hcDni" name="hcDni" />
+        </div>
+                       
+      </section>
+      <section class="contenedorImagen">
+        <label for="imagenInput" class="imagenLabel">Seleccione una imagen: </label>  
+        <input type="file" id="file" name="imagenInput" accept="image/*, application/pdf" onchange="mostrar()" class="imagenInput"/>
+        <br>
+        <img id="img" class="imagen"/>
+        <br>
+        <button id="generarPdf" class="botonGenerar">Generar</button>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="./js/funciones.js"></script>
+  </body>
+</html>

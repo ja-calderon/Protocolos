@@ -1,0 +1,213 @@
+* {
+    font-family: 'Archivo Narrow', sans-serif;
+}
+:root{
+    --colorBlanco:#FFFFFF;
+    --fondoTitulos:#A8E6CF;
+    --fondoOscuro:#d5ddd7;
+    --fondoVerde:#0ea27b;
+    --fondoVerdeUno:#6A9182;
+    --fondoVOscuro:#4B665C;
+    --gradiente: linear-gradient(#A8E6CF, #89BBA9);
+}
+/*Cabecera*/
+body{
+    background-color: var(--fondoOscuro);
+}
+header{
+    background: var(--fondoVerde);
+    padding: 1rem .5rem;
+    border-radius:0% 0% 10% 10% / 0% 0% 10% 10%;
+}
+header h1{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--colorBlanco);
+}
+/*Cuerpo*/
+main section.datos{
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 1rem;
+    gap: 1rem;
+}
+main section.datos div{
+    padding: 1rem .5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+}
+main section.datos div label{
+    width: 100%;
+    font-size: 1.5rem;
+}
+main section.datos div input{
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgb(114, 114, 114);
+    border-radius: 1%;
+    outline: none;
+}
+main section.datos div.contenedor__fecha{
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+main section.datos div.contenedor__fecha label{
+    width: 20%;
+    text-align: left;
+}
+main section.datos div.contenedor__fecha input{
+    width: 45%;
+}
+
+
+main section.datos div.contenedor__hora{
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+main section.datos div.contenedor__hora label{
+    width: 20%;
+    font-size: .9rem;
+    text-align: left;
+}
+main section.datos div.contenedor__hora input{
+    width: 25%;
+    margin: 0;
+}
+
+embed{
+    width: 100vw;
+}
+.imagen{
+    width: 100%;
+}
+
+@media print{
+    body{
+        height: 100vw;
+        background-color: transparent;
+    }
+    header{
+        display: none;
+    }
+    main section.datos{
+        flex-direction: row;
+        flex-wrap: wrap;    
+        gap: 0;
+        margin: 0 1rem;
+        padding: 0;
+    }
+    main section.datos div{
+        flex-direction: row;
+        width: 50%;
+        padding: 0.2rem;
+    }
+    main section.datos div:first-child{
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    main section.datos div label{
+        text-align: left;
+        font-size: 1rem;
+        width: 20%;
+        margin-right: .5rem;
+    }
+    main section.datos div input{
+        text-align: left;
+        width: 90%;
+        border: none;
+        outline: none;
+    }
+    main section.datos div.contenedor__fecha label{
+        font-size: 1rem;
+        width: 15%;
+    }
+    main section.datos div.contenedor__fecha input{
+        font-size: 1rem;
+    }
+    main section.datos div.contenedor__fecha input[type="date"]::-webkit-outer-spin-button, 
+    main section.datos div.contenedor__fecha input[type="date"]::-webkit-calendar-picker-indicator{
+        opacity: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    main section.datos div.contenedor__hora{
+        justify-content: flex-start;
+    }
+
+    input[type="date"], input[type="time"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    .horaFinalizacion{
+        margin-left: 1rem;
+    }
+
+    main section.datos div.contenedor__hora label{
+        width: 25%;
+        font-size: 1rem;
+    }
+    main section.datos div.contenedor__hora input{
+        font-size: 1rem;
+    }
+    main section.datos div.contenedor__hora input[type="time"]::-webkit-calendar-picker-indicator{
+        -webkit-appearance: none !important;
+        appearance: none;
+        margin-right: 1rem;
+    }
+    main section.datos div.contenedor__lugar{
+        flex-direction: row;
+        align-items: center;
+    }
+    main section.datos div.contenedor__lugar label{
+        width: 8%;
+    }
+    main section.datos div.contenedor__lugar input{
+        width: 60%;
+        text-align: left;
+    }
+
+    main section.datos div.contenedor__paciente{
+        flex-direction: row;
+        align-items: center;
+    }
+    main section.datos div.contenedor__paciente input{
+        width: 60%;
+    }
+    main section.datos div.contenedor__hcDNI{
+        flex-direction: row;
+        align-items: center;
+    }
+    main section.datos div.contenedor__hcDNI input{
+        width: 60%;
+    }
+    section.contenedorImagen{
+        display: flex;
+        flex-direction: column;
+    }
+    .imagenLabel{
+        display: none;
+        align-items: center;
+    }
+    .imagenInput{
+        display: none;
+    }
+    .imagen{
+        height: 60vh;
+        width:auto;
+    }
+    .botonGenerar{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+}
