@@ -13,6 +13,7 @@
 /*Cabecera*/
 body{
     background-color: var(--fondoOscuro);
+    max-width: 1200px;
 }
 header{
     background: var(--fondoVerde);
@@ -85,6 +86,11 @@ embed{
 }
 .imagen{
     width: 100%;
+}
+
+section.contenedorImagen{
+    display: flex;
+    flex-direction: column;
 }
 
 @media print{
