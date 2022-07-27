@@ -140,6 +140,9 @@ section.contenedorImagen{
         border: none;
         outline: none;
     }
+    main section.datos div.contenedor__fecha{
+        justify-content:flex-start;
+    }
     main section.datos div.contenedor__fecha label{
         font-size: 1rem;
         width: 15%;
@@ -195,8 +198,11 @@ section.contenedorImagen{
         flex-direction: row;
         align-items: center;
     }
+    main section.datos div.contenedor__paciente label{
+        width: 35%;
+    }
     main section.datos div.contenedor__paciente input{
-        width: 60%;
+        width: 50%;
     }
     main section.datos div.contenedor__hcDNI{
         flex-direction: row;
@@ -217,8 +223,9 @@ section.contenedorImagen{
         display: none;
     }
     .imagen{
-        height: 60vh;
-        width:auto;
+        height: 52rem;
+        object-fit:scale-down;
+        object-position: center center;
     }
     .botonGenerar{
         display: none;
